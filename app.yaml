@@ -1,0 +1,18 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+default_expiration: "4d 5h"
+
+handlers:
+- url: /images
+  static_dir: images
+  expiration: "1h"
+
+- url: /files
+  static_dir: files
+  expiration: "1h"
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
